@@ -7,24 +7,26 @@
   <title>Ziad Abou-Ghali</title>
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/6en8XCp+HHAAK5GSLf2xlYtvJ8U2Q4U+9cuEnJoa3" crossorigin="anonymous" />
   <script src="https://kit.fontawesome.com/0a299cd49f.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
+  <div class="starlight"></div>
   <div class="nav-container">
     <header>
       <nav>
         <a href="#about">About</a>
         <a href="#work">Work</a>
         <a href="#contact">Contact</a>
+        <div class="social-icons">
+          <a href="https://github.com/ziadaboughali" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github fa-xl"></i></a>
+          <a href="https://www.linkedin.com/in/ziad-abou-ghali/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+        </div>
         <label class="switch">
           <input type="checkbox" id="theme-switch">
           <span class="slider round"></span>
         </label>
-        <div class="social-icons">
-          <a href="https://github.com/ziadaboughali" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/ziad-abou-ghali/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
-        </div>
         
       </nav>
     </header>
@@ -37,9 +39,65 @@
         <h2>An aspiring Software Developer.</h2>
         <a href="#work" class="viewMyWorkButton">View my work</a>
       </section>
+      <section id="work">
+        <h2>Where I've Worked</h2>
+        <div class="work-experience">
+          <div class="job-selector">
+            <button class="company-btn active" data-index="0">KFC</button>
+            <button class="company-btn" data-index="1">Company 2</button>
+            <button class="company-btn" data-index="2">Company 3</button>
+            <div class="indicator"></div>
+          </div>
+          <div class="job-details">
+            <div class="job-info" style="display: block;">
+                <h3>Job Title at KFC</h3>
+                <p class="timeframe">Timeframe (e.g., 2020 - 2022)</p>
+                <ul class="accomplishments">
+                    <li>Accomplishment 1</li>
+                    <li>Accomplishment 2</li>
+                    <li>Accomplishment 3</li>
+                </ul>
+            </div>
+            <div class="job-info">
+                <h3>Job Title at Company 2</h3>
+                <p class="timeframe">Timeframe (e.g., 2019 - 2020)</p>
+                <ul class="accomplishments">
+                    <li>Accomplishment 1</li>
+                    <li>Accomplishment 2</li>
+                    <li>Accomplishment 3</li>
+                </ul>
+            </div>
+            <div class="job-info">
+                <h3>Job Title at Company 3</h3>
+                <p class="timeframe">Timeframe (e.g., 2018 - 2019)</p>
+                <ul class="accomplishments">
+                    <li>Accomplishment 1</li>
+                    <li>Accomplishment 2</li>
+                    <li>Accomplishment 3</li>
+                </ul>
+            </div>
+        </div>
+        </div>
+      </section>
+      
     </main>
 
+    
+  
+    
+    
+
     <footer>
+      <p>&copy; Ziad Abou-Ghali 2023</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+  
+
+</body>
+</html>
+
       <p>&copy; Ziad Abou-Ghali 2023</p>
     </footer>
   </div>
