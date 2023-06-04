@@ -8,49 +8,35 @@ document.getElementById("theme-switch").addEventListener("change", function(even
   }
 });
 
-const companyBtns = document.querySelectorAll(".company-btn");
-const jobDetails = document.querySelectorAll(".job-info");
-const indicator = document.querySelector(".indicator");
 
-const firstButton = companyBtns[0];
-const buttonHeight = firstButton.offsetHeight + parseFloat(window.getComputedStyle(firstButton).marginBottom);
-indicator.style.top = `0px`;
-
-
-companyBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const index = parseInt(btn.getAttribute("data-index"));
-
-    companyBtns.forEach((b, idx) => {
-      if (index === idx) {
-        b.classList.add("active");
-        jobDetails[idx].style.display = "block";
-        const buttonHeight = 36;
-        indicator.style.top = `${idx * buttonHeight}px`;
-      } else {
-        b.classList.remove("active");
-        jobDetails[idx].style.display = "none";
-      }
-    });
-  });
+document.getElementById("run-button").addEventListener("click", function() {
+  var algorithm = document.getElementById("algorithm-selector").value;
+  var pageRefString = document.getElementById("page-reference-string").value;
+  var numFrames = document.getElementById("num-frames").value;
+  
+  console.log(`Algorithm: ${algorithm}`);
+  console.log(`Page Reference String: ${pageRefString}`);
+  console.log(`Number of Frames: ${numFrames}`);
 });
 
-function createStar() {
-  const star = document.createElement("div");
-  star.className = "star";
-  star.style.width = `${Math.random() * 3}px`;
-  star.style.height = star.style.width;
-  star.style.top = `${Math.random() * 100}vh`;
-  star.style.left = `${Math.random() * 100}vw`;
-  star.style.animationDuration = `${Math.random() * 3 + 2}s`;
-  return star;
-}
 
-const starlight = document.querySelector(".starlight");
-const numberOfStars = 400;
+// Let's assume you have a checkbox for your light mode slider with id "light-mode-slider" // FOR THE PAGE REPLACEMENT SECTION // 
+document.getElementById('light-mode-slider').addEventListener('change', function() {
+  var color, backgroundColor;
+  if (this.checked) {
+      color = '#0a192f';
+      backgroundColor = '#abb2b93';
+  } else {
+      color = '#abb2b9';
+      backgroundColor = '#0a192f';
+  }
 
-for (let i = 0; i < numberOfStars; i++) {
-  starlight.appendChild(createStar());
-}
+  var elements = document.querySelectorAll('select, input');
+  for (var i = 0; i < elements.length; i++) {
+      elements[i].style.color = color;  
+      elements[i].style.backgroundColor = backgroundColor;
+  }
+});
 
-createStar()
+// This script will switch the theme of your page when the checkbox is clicked
+
